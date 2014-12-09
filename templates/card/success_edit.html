@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+    <div class="row">
+        <div class="col col-md-8 pull-right">
+           <div class="alert alert-info">Карта "{{ card.title }}" отредоктирована!</div>
+           <a href="{% url 'cards_list' %}">все карты</a>
+        </div>
+    </div>
+
+{% endblock %}

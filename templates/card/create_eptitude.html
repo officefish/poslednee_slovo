@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+    <div class="row">
+        <div class="col col-md-8 pull-right">
+            <form id="create_eptitude_form" action="{{ request.get_full_path }}" method="post" >
+            <h2>{% trans 'Create Eptitude' %}</h2>
+            <div>карта: {{ card.title }}</div>
+            <div>описание: {{ card.description }}</div>
+            {% csrf_token %}
+            {% include "partials/form_fields.html" %}
+            <button name="create_eptitude_submit" type="submit" value="Create Card" class="btn btn-large btn-primary" >{% trans 'Create Eptitude' %}</button>
+       </form>
+        </div>
+    </div>
+
+{% endblock %}
